@@ -1,0 +1,19 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Step 1: Load the CSV data into a DataFrame
+df = pd.read_csv('Emotion Words.csv')
+
+# Step 2: Data Manipulation (if needed) - No manipulation needed in this case
+
+# Step 3: Visualization
+# Count the occurrences of each emotion
+emotion_counts = df['EMOTION'].value_counts()
+
+# Create a bar chart
+emotion_counts.plot(kind='bar')
+plt.title('Distribution of Emotions')
+plt.xlabel('Emotion')
+plt.ylabel('Count')
+plt.show()
+print(df)
